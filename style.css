@@ -1,0 +1,107 @@
+:root{
+    --bg:#ffffff;
+    --panel:#ffffff;
+    --border:#e6e6e6;
+    --text:#111;
+    --muted:#666;
+    --link:#0b5bd3;
+    --chip:#f4f6f8;
+  }
+  
+  *{ box-sizing:border-box; }
+  body{
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    margin:0;
+    padding:16px;
+    background:var(--bg);
+    color:var(--text);
+  }
+  
+  .header{
+    display:flex;
+    gap:16px;
+    align-items:flex-end;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    margin-bottom:12px;
+  }
+  
+  .title h1{ margin:0; font-size:28px; }
+  .sub{ color:var(--muted); margin-top:4px; }
+  
+  .controls{ display:flex; gap:12px; align-items:center; }
+  .control{ display:flex; gap:8px; align-items:center; color:var(--muted); }
+  select{ padding:6px 8px; border:1px solid var(--border); border-radius:10px; }
+  
+  .grid{
+    display:grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap:12px;
+  }
+  
+  .panel{
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:12px;
+    background:var(--panel);
+  }
+  
+  .dayMeta{
+    padding:10px 12px;
+    background:var(--chip);
+    border-radius:12px;
+    margin-bottom:12px;
+    color:var(--muted);
+  }
+  
+  .card{
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:12px;
+    margin:10px 0;
+  }
+  
+  .cardTop{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    align-items:flex-start;
+  }
+  
+  .name{ font-weight:700; }
+  .meta{ color:var(--muted); margin-top:6px; line-height:1.35; }
+  
+  .badges{ display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+  .badge{
+    font-size:12px;
+    background:var(--chip);
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:3px 8px;
+    color:var(--muted);
+    white-space:nowrap;
+  }
+  
+  .links{
+    display:flex;
+    gap:12px;
+    margin-top:10px;
+    flex-wrap:wrap;
+  }
+  a{
+    color:var(--link);
+    text-decoration:none;
+  }
+  a:hover{ text-decoration:underline; }
+  
+  #map{
+    height: 75vh;
+    border-radius:14px;
+    overflow:hidden;
+  }
+  
+  @media (max-width: 980px){
+    .grid{ grid-template-columns:1fr; }
+    #map{ height: 45vh; }
+  }
+  
